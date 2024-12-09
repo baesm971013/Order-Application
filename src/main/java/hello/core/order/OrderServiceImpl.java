@@ -16,7 +16,7 @@ public class OrderServiceImpl implements OrderService{
     private final DiscountPolicy discountPolicy; // 추상화인 interface에만 의존!!
 
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, @Qualifier("mainDiscountPolicy") DiscountPolicy discountPolicy){
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy){
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
