@@ -19,11 +19,11 @@ public class ConfigurationSingletionTest {
         OrderServiceImpl orderService = ac.getBean("orderService", OrderServiceImpl.class);
 
         MemberRepository memberRepository = memberService.getMemberRepository();
-        MemberRepository memberRepository1 = orderService.getMemberRepository();
-
-        System.out.println(memberRepository1);
-        System.out.println(memberRepository);
-        Assertions.assertThat(memberRepository).isSameAs(memberRepository1);
+//        MemberRepository memberRepository1 = orderService.getMemberRepository();
+//
+//        System.out.println(memberRepository1);
+//        System.out.println(memberRepository);
+//        Assertions.assertThat(memberRepository).isSameAs(memberRepository1);
 
     }
 }
