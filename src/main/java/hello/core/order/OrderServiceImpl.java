@@ -15,17 +15,21 @@ public class OrderServiceImpl implements OrderService{
 
     //생성자 1개일떄는 autowired 생략 가능함.
 
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy){
+        System.out.println("first");
         this.discountPolicy = discountPolicy;
         this.memberRepository = memberRepository;
     }
     @Autowired
     public void setMemberRepository(MemberRepository memberRepository){
+        System.out.println("next member repository");
         this.memberRepository = memberRepository;
     }
 
     @Autowired
     public void setDiscountPolicy(DiscountPolicy discountPolicy){
+        System.out.println("next discoutn poplicy");
         this.discountPolicy=discountPolicy;
     }
 
